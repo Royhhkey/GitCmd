@@ -51,7 +51,7 @@ git checkout HEAD <file >   # 丢弃暂存区和工作区的修改
 git reset --hard HEAD^      # 回退到上一个版本
 git reset --hard commit-id  # 回退到指定版本
 
-
+git checkout   <branchname >    # 切换分支
 git checkout -b <branchname >  # 创建并切换到新分支
 git switch <branch-name >       # 切换分支
 git branch                  # 查看分支
@@ -62,4 +62,36 @@ git rebase <branchname >     # 变基合并分支
 
 git clone git@github.com:用户名/仓库名.git  #克隆远程仓库到本地
 git remote add origin git@github.com:用户名/仓库名.git  #添加远程仓库
+
 ````
+
+###    项目有关命令：
+``` shell
+git clone <项目地址>  #克隆项目到本地
+git remote add origin <项目地址>  #添加远程仓库
+git push -u origin master  #推送本地仓库到远程仓库
+git branch -a  #查看所有分支
+git branch -r  #查看远程分支
+git branch -m <old_name> <new_name>  #重命名分支
+git branch -D <branch_name>  #删除分支
+git checkout -b <branch_name>  #创建并切换到新分支
+git merge <branch_name>  #合并分支
+git rebase <branch_name>  #变基合并分支
+git stash  #暂存当前工作区
+git stash list  #查看暂存区列表
+git stash pop  #恢复暂存区文件
+git stash drop  #删除暂存区文件
+git remote -v  #查看远程仓库地址
+git remote show origin  #查看远程仓库详细信息
+git remote rename origin old_name  #重命名远程仓库
+git remote remove origin  #删除远程仓库
+git fetch origin  #从远程仓库获取更新
+git pull origin master  #从远程仓库获取更新并合并到本地仓库
+git push origin <branch_name>  #推送本地分支到远程仓库
+git push origin --delete <branch_name>  #删除远程分支
+git tag  #查看所有标签
+git tag -a v1.0 -m "版本1.0"  #创建标签
+git show v1.0  #查看标签信息
+git push origin v1.0  #推送标签到远程仓库
+git checkout v1.0  #切换到指定标签
+```
