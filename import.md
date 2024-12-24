@@ -59,3 +59,32 @@ N   # 向上搜索
 :s/old/new/g   # 替换当前行
 
 ```
+
+
+```shell
+ git init   # 初始化本地仓库
+ git remote add origin <name> # 添加远程仓库
+ git pull origin master   # 从远程仓库拉取最新代码
+ git add .   # 添加所有修改文件到暂存区
+ git commit -m "commit message"   # 提交修改到本地仓库
+ git commit -am "commit message" || git commit -a-m "commit message"   # 添加并提交所有修改文件到本地仓库
+ git push origin master   # 推送本地仓库到远程仓库
+ git push -u origin master   # 推送本地仓库到远程仓库并设置默认分支为 master
+
+ git branch -a   # 查看所有分支
+ git branch <name>   # 创建分支
+ git checkout -b <name>   # 创建并切换到新分支
+
+ git merge <name>   # 合并分支  将名为 <name> 的本地分支合并到当前所在的本地分支
+ git rebase <name>   # 变基  将当前分支变基到 <name> 分支
+
+ git branch -d <name>   # 删除分支
+ git push origin --delete <name>   # 删除远程分支
+
+ git reset --hard <commit-id>   # 回退到指定提交
+ git reset --soft HEAD^   # 回退到上一个版本
+ git reset --hard HEAD^   # 回退到上一个版本
+ git reset --hard origin/master   # 回退到远程仓库的最新版本
+
+ git reflog   # 查看所有提交历史，包括已经删除的提交记录
+```     
