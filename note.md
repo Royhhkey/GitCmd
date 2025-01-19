@@ -63,6 +63,14 @@ git rebase <branchname >     # 变基合并分支
 git clone git@github.com:用户名/仓库名.git  #克隆远程仓库到本地
 git remote add origin git@github.com:用户名/仓库名.git  #添加远程仓库
 
+git config --global -l  #查看全局配置
+git config --global user.name "用户名"  #设置用户名
+git config --global user.email "邮箱"  #设置邮箱
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
+
+git config --global --unset http.proxy   #取消全局代理
+git config --global --unset https.proxy   #取消全局代理
 ````
 
 ###    项目有关命令：
