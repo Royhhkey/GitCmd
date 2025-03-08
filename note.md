@@ -102,4 +102,21 @@ git tag -a v1.0 -m "版本1.0"  #创建标签
 git show v1.0  #查看标签信息
 git push origin v1.0  #推送标签到远程仓库
 git checkout v1.0  #切换到指定标签
+
+
+
+git restore src/components/Pagination.vue   #恢复文件
+
+git restore --staged src/components/Pagination.vue   #取消暂存
+
+git reset --hard HEAD^      # 回退到上一个版本
+git reset --hard commit-id  # 回退到指定版本
+# 显示每个文件的差异
+$files = git diff --name-only
+foreach ($file in $files) {
+    Write-Output "Diff for $file"
+    git diff $file
+    Read-Host -Prompt "Press Enter to continue to the next file"
+}  
+
 ```
