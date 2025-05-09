@@ -107,7 +107,7 @@ git checkout v1.0  #切换到指定标签
 
 git push -u origin master
 git restore src/components/Pagination.vue   #恢复文件
-
+ git remote prune origin  #清理远程仓库
 git restore --staged src/components/Pagination.vue   #取消暂存
 
 git reset --soft HEAD~1    #回退到上一个版本  
