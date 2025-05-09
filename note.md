@@ -105,10 +105,12 @@ git checkout v1.0  #切换到指定标签
 
 
 
+git push -u origin master
 git restore src/components/Pagination.vue   #恢复文件
 
 git restore --staged src/components/Pagination.vue   #取消暂存
 
+git reset --soft HEAD~1    #回退到上一个版本  
 git reset --hard HEAD^      # 回退到上一个版本
 git reset --hard commit-id  # 回退到指定版本
 # 显示每个文件的差异
@@ -119,4 +121,10 @@ foreach ($file in $files) {
     Read-Host -Prompt "Press Enter to continue to the next file"
 }  
 
+git reflog  #查看所有操作记录
+git checkout master      #切换到master分支
+
+git  log --oneline --decorate --graph --all  #查看所有操作记录
+git  log --oneline      #查看所有操作记录
+git log --pretty=format:"%h %ad %s" --date=short  #显示提交时间和简短的提交信息
 ```
