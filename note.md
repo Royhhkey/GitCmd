@@ -1,4 +1,4 @@
-![alt text](QQ_1723082881283.png)
+![QQ_1723082881283](https://gitee.com/roy-123/image/raw/master/20250810172733897.png)
 ## 推送文件至远程
 
 #### 1 建立本地仓库
